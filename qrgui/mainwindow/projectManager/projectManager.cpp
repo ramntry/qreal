@@ -13,7 +13,13 @@ ProjectManager::ProjectManager(MainWindow *mainWindow)
 		, mMainWindow(mainWindow)
 		, mAutosaver(new Autosaver(this))
 		, mUnsavedIndicator(false)
+		, mSaveFilePath(mAutosaver->filePath())
 {
+}
+
+QString ProjectManager::saveFilePath()
+{
+	return mSaveFilePath;
 }
 
 bool ProjectManager::openExisting(QString const &fileName)

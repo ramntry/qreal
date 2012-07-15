@@ -52,6 +52,8 @@ public:
 	void setUnsavedIndicator(bool isUnsaved);
 	void reinitAutosaver();
 
+	QString saveFilePath();
+
 private:
 	bool import(const QString &fileName);
 	bool saveFileExists(QString const &fileName);

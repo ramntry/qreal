@@ -82,7 +82,7 @@ MainWindow::MainWindow()
 	splashScreen.setProgress(40);
 
 	initDocks();
-	mModels = new models::Models("", mEditorManager);
+	mModels = new models::Models(mProjectManager->saveFilePath(), mEditorManager);
 
 	mFindReplaceDialog = new FindReplaceDialog(mModels->logicalRepoApi(), this);
 	mFindHelper = new FindManager(mModels->repoControlApi(), mModels->mutableLogicalRepoApi()
